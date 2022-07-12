@@ -1,0 +1,203 @@
+html *{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #272727;
+}
+
+/* header */
+
+header {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    background-color: #272727;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 0px;
+    border: 1px gray solid;
+}
+
+#search {
+    display: flex;
+}
+
+#logo {
+    width: 70px;
+    height: auto;
+    margin: 10px;
+    padding-right: 2%;
+}
+
+#logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#menu-nav{
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    color: white;
+    padding: 0.7rem;
+    margin: 0 0.313rem;
+    font-size: 1.2rem;
+}
+
+.menu-item:hover {
+    border-bottom: 1px gold solid;
+}
+
+#topbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px gray solid;
+}
+
+#login-search-bar {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+#login-search-bar a {
+    border: 1px gold solid;
+    padding: 0.625rem;
+    margin: 0 0.938rem;
+}
+
+#login-search-bar a:hover {
+    background-color: black;
+    color: white;
+}
+
+#login-search-bar a:active {
+    background-color: black;
+    color: white;
+    opacity: 0.1;
+}
+
+#login-search-bar ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* main */
+
+#banner {
+    background-image: url(./Imagens/635740596509290617-1568940782_OLY.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px gray solid;
+    border-right: 1px gray solid;
+}
+
+#banner h1 {
+    background-color: #272727;
+    color: azure;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#first-section {
+    border-bottom: 1px gray solid;
+}
+
+/* cards */
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    padding: 3rem 0;
+    margin: 0 auto;
+}
+
+#cards img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.cards {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px gray solid;
+    background-color: white;
+    padding: 20px;
+}
+
+#titles {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#titles h1 {
+    font-size: 3rem;
+}
+
+#titles h2 {
+    font-size: 2rem;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #4b4b4b;
+    border-top: 1px gray solid;
+    color: azure;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+footer h3 {
+    font-size: 0.8rem;
+}
+
+#contacts {
+
+}
