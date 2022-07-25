@@ -63,9 +63,10 @@ const validateCred = arr => {
 }
 
 const findInvalidCards = nestedArr => {
-    nestedArr.forEach(element => {
+    nestedArr.map(element => {
         return validateCred(element);
     });
+    return nestedArr;
 }
 
 
