@@ -61,7 +61,16 @@ const validateCred = arr => {
         return validateArr;
     }
 }
-    console.log(validateCred(mystery1));
+
+const findInvalidCards = nestedArr => {
+    nestedArr.forEach(element => {
+        return validateCred(element);
+    });
+}
+
+
+
+console.log(findInvalidCards(batch));
 
 
 
