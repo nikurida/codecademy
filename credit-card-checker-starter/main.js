@@ -37,19 +37,19 @@ const validateCred = arr => {
         let parPos = 0;
         let imparPos = 0;
         for (j = arr.length; j > 0; j--) {
-            console.log(`Numero da posição atual: ${arr[j - 1]}`);
-            if (j % 2 === 0) {
-                let valParPos = arr[j - 1] * 2;
-                console.log(`valParPos antes de tratar: ${valParPos}.`); 
-                if (valParPos >= 10){
-                    valParPos = (valParPos % 10) + (Math.floor(valParPos/10));
+            // console.log(`Numero da posição atual: ${arr[j - 1]}`);
+            if (j % 2 === 1) {
+                let valImparPos = arr[j - 1] * 2;
+               // console.log(`valParPos antes de tratar: ${valImparPos}.`); 
+                if (valImparPos >= 10){
+                    valImparPos = (valImparPos % 10) + (Math.floor(valImparPos/10));
                 }
-                console.log(`valParPos: ${valParPos}.`);                
-                parPos += valParPos;
-                console.log(`Acumulador ParDig: ${parPos}.`);
+               // console.log(`valParPos: ${valImparPos}.`);                
+                imparPos += valImparPos;
+              //  console.log(`Acumulador ParDig: ${imparPos}.`);
             } else {
-                imparPos += arr[j - 1];
-                console.log(`Acumulador ImparPos: ${imparPos}.`);
+                parPos += arr[j - 1];
+              //  console.log(`Acumulador ImparPos: ${parPos}.`);
             }
         }
         if ((parPos + imparPos) % 10 === 0) {
@@ -61,7 +61,7 @@ const validateCred = arr => {
         return validateArr;
     }
 }
-    console.log(validateCred(valid1));
+    console.log(validateCred(mystery1));
 
 
 
