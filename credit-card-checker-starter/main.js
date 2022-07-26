@@ -48,7 +48,7 @@ const findInvalidCards = nestedArr => {
 
 const idInvalidCardCompanies = arr => {
 
-    let companies = [];
+    const companies = [];
     arr.forEach(element => {
        if ((element[0] == 3) && (companies.indexOf('Amex') == -1)){
         companies.push('Amex');
