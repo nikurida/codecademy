@@ -32,7 +32,7 @@ const validateCred = arr => {
     const total = arr.reverse().reduce((total, n) => {
         if (double) {
             n *= 2;
-            if (n >9) n -= 9;            
+            if (n > 9) n -= 9;
         }
         double = !double;
         return total + n;
@@ -43,14 +43,33 @@ const validateCred = arr => {
 
 
 const findInvalidCards = nestedArr => {
-     return nestedArr.filter(element => !validateCred(element));
+    return nestedArr.filter(element => !validateCred(element));
 }
 
-console.log(findInvalidCards(batch));
+const idInvalidCardCompanies = arr => {
 
+    let companies = [];
+    arr.forEach(element => {
+       if ((element[0] == 3) && (companies.indexOf('Amex') == -1)){
+        companies.push('Amex');
+       }else if((element[0] == 4) && (companies.indexOf('Visa') == -1)){
+        companies.push('Visa');
+       }else if((element[0] == 5) && (companies.indexOf('Mastercard') == -1)){
+        companies.push('Mastercard');
+       }else if((element[0] == 6) && (companies.indexOf('Discover') == -1)){
+        companies.push('Discover');
+       }else if ((element[0] !== 3) && (element[0] !== 4) && (element[0] !== 5) && (element[0] !== 6)){
+        companies.push('Company is not found!');
+       }
+    });
+    return companies;
+}
 
+const teste = findInvalidCards(batch);
 
+console.log(teste);
 
+console.log(idInvalidCardCompanies(teste));
 
 
 
