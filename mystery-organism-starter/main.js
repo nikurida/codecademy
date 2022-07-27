@@ -51,12 +51,11 @@ const pAequorFactory = (specimenNum, dna) => {
 const coleteSurviveSpecimens = quantRoll => {
   if (typeof quantRoll !== 'number') return 'Invalid data type. Please improve a number parameter.'
   const surviveSpecimens = [];
-  for (i = 0; i <= quantRoll; i++) {
-    let specime = pAequorFactory(i + 100, mockUpStrand());
+  for (let i = 0; i <= quantRoll; i++) {
+    let specime = pAequorFactory(quantRoll+i, mockUpStrand());
     if (specime.willLikelySurvive()) surviveSpecimens.push(specime);
-    console.log(surviveSpecimens);
   }
-  // return surviveSpecimens;
+  return surviveSpecimens;
 }
 
 console.log(coleteSurviveSpecimens(30));
